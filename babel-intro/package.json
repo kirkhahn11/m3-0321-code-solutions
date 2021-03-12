@@ -1,0 +1,23 @@
+{
+  "name": "babel-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-arrow-functions": "^7.13.0",
+    "@babel/plugin-transform-block-scoping": "^7.12.13",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "babel-loader": "^8.2.2"
+  }
+}
