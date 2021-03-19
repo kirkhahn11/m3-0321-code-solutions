@@ -6,32 +6,37 @@ class HotButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: 'purple',
       count: 0
     };
     this.handleClick = this.handleClick.bind(this);
+    this.getColor = this.getColor.bind(this);
   }
 
   render() {
+    const color = this.getColor();
     return (
-      <button id='button' style={{ backgroundColor: this.state.color }} onClick={this.handleClick}>Hot Button</button>
+      <button id='button' style={{ backgroundColor: color }} onClick={this.handleClick}>Hot Button</button>
     );
   }
 
   handleClick() {
     this.setState({ count: this.state.count + 1 });
-    if (this.state.count > 1) {
-      this.setState({ color: 'blue' });
-    } if (this.state.count > 4) {
-      this.setState({ color: 'green' });
-    } if (this.state.count > 7) {
-      this.setState({ color: 'yellow' });
-    } if (this.state.count > 10) {
-      this.setState({ color: 'orange' });
-    } if (this.state.count > 13) {
-      this.setState({ color: 'red' });
-    } if (this.state.count > 14) {
+  }
+
+  getColor() {
+    if (this.state.count < 3) {
+      return 'blue';
+    } else if (this.state.count >= 3 && this.state.count < 6) {
+      return 'green';
+    } else if (this.state.count >= 6 && this.state.count < 9) {
+      return 'yellow';
+    } else if (this.state.count >= 9 && this.state.count < 12) {
+      return 'orange';
+    } else if (this.state.count >= 12 && this.state.count < 15) {
+      return 'red';
+    } else if (this.state.count >= 15) {
       this.setState({ count: 0 });
+      return 'blue';
     }
   }
 }
