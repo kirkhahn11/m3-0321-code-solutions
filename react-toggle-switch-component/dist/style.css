@@ -1,0 +1,39 @@
+.outer-box {
+  width: 300px;
+  height: 100px;
+  background-color: limegreen;
+  border: 1px solid black;
+  margin-right: 30px;
+}
+
+.inner-box {
+  width: 130px;
+  height: 85px;
+  border: 1px solid black;
+  background-color: white;
+  margin-left: 15px;
+  border-radius: 35%;
+}
+
+.container {
+  display: flex;
+  font-size: 30px;
+  line-height: 91px;
+}
+
+.inner-box-2 {
+  width: 130px;
+  height: 85px;
+  border: 1px solid black;
+  background-color: white;
+  margin-left: 135px;
+  border-radius: 35%;
+}
+
+.outer-box-2 {
+  width: 300px;
+  height: 100px;
+  background-color: gray;
+  border: 1px solid black;
+  margin-right: 30px;
+}
