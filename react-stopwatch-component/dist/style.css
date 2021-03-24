@@ -1,0 +1,28 @@
+.counter {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 192px;
+  font-size: 60px;
+  display: block;
+}
+
+.play {
+  background-image: url(../img/play.png);
+  background-size: cover;
+  height: 75px;
+  width: 75px;
+  margin-left: 59px;
+  margin-top: 25px;
+}
+
+.pause {
+  background-image: url(../img/pause.png);
+  background-size: cover;
+  height: 75px;
+  width: 75px;
+  margin-left: 59px;
+  margin-top: 25px;
+}
