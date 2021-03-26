@@ -9,8 +9,8 @@ const pokedex = [
   { number: '039', name: 'Jigglypuff' }
 ];
 
-function PokemonList() {
-  const listPokemon = pokedex.map(pokemon =>
+function PokemonList(props) {
+  const listPokemon = props.pokemon.map(pokemon =>
   <li key={pokemon.number}>
     {pokemon.name}
   </li>
