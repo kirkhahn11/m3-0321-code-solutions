@@ -1,0 +1,21 @@
+.menu {
+  flex-basis: 25%;
+  background-color: white;
+  height: 100vh;
+  width: 50vh;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.gray-area {
+  background-color: gray;
+  flex-basis: 75%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 550vh;
+}
