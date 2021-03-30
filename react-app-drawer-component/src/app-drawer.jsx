@@ -8,11 +8,9 @@ class AppDrawer extends React.Component {
   }
 
   handleClick() {
-    if (this.state.isClicked === false) {
-      this.setState({ isClicked: true });
-    } else {
-      this.setState({ isClicked: false });
-    }
+    this.setState({
+      isClicked: !this.state.isClicked
+    });
   }
 
   render() {
