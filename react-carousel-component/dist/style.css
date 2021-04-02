@@ -3,35 +3,26 @@
 }
 
 .squirtle {
-  background-image: url(../img/squirtle.jpeg);
-  background-size: cover;
   width: 200px;
   height: 215px;
 }
 
 .sandshrew {
-  background-image: url(../img/sandshrew.jpeg);
-  background-size: cover;
   width: 200px;
   height: 215px;
 }
 
 .umbreon {
-  background-image: url(../img/umbreon.jpeg);
-  background-size: cover;
   width: 200px;
   height: 215px;
 }
 
 .mew {
-  background-image: url(../img/mew.jpeg);
-  background-size: cover;
   width: 200px;
   height: 215px;
 }
 
 .magikarp {
-  background-image: url(../img/magikarp.png);
   background-size: cover;
   width: 200px;
   height: 215px;

@@ -4,23 +4,23 @@ import Carousel from './carousel';
 
 const pokemon = [
   {
-    name: 'squirtle',
+    url: '../img/squirtle.jpeg',
     id: 1
   },
   {
-    name: 'sandshrew',
+    url: '../img/sandshrew.jpeg',
     id: 2
   },
   {
-    name: 'umbreon',
+    url: '../img/umbreon.jpeg',
     id: 3
   },
   {
-    name: 'mew',
+    url: '../img/mew.jpeg',
     id: 4
   },
   {
-    name: 'magikarp',
+    url: '../img/magikarp.png',
     id: 5
   }
 ];

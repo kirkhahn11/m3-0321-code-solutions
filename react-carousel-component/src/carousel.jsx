@@ -9,7 +9,7 @@ class Carousel extends React.Component {
     this.handleClickLeft = this.handleClickLeft.bind(this);
     this.handleClickRight = this.handleClickRight.bind(this);
     this.stepper = this.stepper.bind(this);
-    this.componentDidMount = this.componentDidMount.bind(this);
+    this.startInterval = this.startInterval.bind(this);
   }
 
   handleClickLeft() {
@@ -19,7 +19,7 @@ class Carousel extends React.Component {
     } else {
       this.setState({ id: this.state.id - 1 });
     }
-    this.componentDidMount();
+    this.startInterval();
   }
 
   handleClickRight() {
@@ -29,7 +29,7 @@ class Carousel extends React.Component {
     } else {
       this.setState({ id: this.state.id + 1 });
     }
-    this.componentDidMount();
+    this.startInterval();
   }
 
   stepper() {
@@ -40,11 +40,15 @@ class Carousel extends React.Component {
     }
   }
 
-  componentDidMount() {
+  startInterval() {
     this.timerID = setInterval(
       () => this.stepper(),
       3000
     );
+  }
+
+  componentDidMount() {
+    this.startInterval();
   }
 
   render() {
@@ -54,7 +58,7 @@ class Carousel extends React.Component {
           <div className='img-container'>
             <div className='fas fa-chevron-left arrow' onClick={this.handleClickLeft}></div>
             {pokemon.map(pokemon =>
-            <div key={pokemon.id} className={`content ${pokemon.id === this.state.id ? pokemon.name : 'hidden'}`}></div>
+              <img key={pokemon.id} src={pokemon.url} className={`content ${pokemon.id === this.state.id ? '' : 'hidden'}`}/>
             )}
             <div className='fas fa-chevron-right arrow' onClick={this.handleClickRight}></div>
           </div>
