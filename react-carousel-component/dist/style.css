@@ -1,0 +1,57 @@
+.hidden {
+  display: none;
+}
+
+.squirtle {
+  width: 200px;
+  height: 215px;
+}
+
+.sandshrew {
+  width: 200px;
+  height: 215px;
+}
+
+.umbreon {
+  width: 200px;
+  height: 215px;
+}
+
+.mew {
+  width: 200px;
+  height: 215px;
+}
+
+.magikarp {
+  background-size: cover;
+  width: 200px;
+  height: 215px;
+}
+
+.arrow {
+  font-size: 35px;
+}
+
+.img-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border: solid black 2px;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.black-dot {
+  background-color: black;
+}
