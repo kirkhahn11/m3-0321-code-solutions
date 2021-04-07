@@ -26,8 +26,6 @@ export default class App extends React.Component {
 
   addTodo(newTodo) {
     const cloneList = [...this.state.todos];
-    newTodo.todoId = (cloneList[cloneList.length - 1].todoId + 1);
-    cloneList.push(newTodo);
     fetch('/api/todos', {
       method: 'POST',
       headers: {
@@ -36,11 +34,15 @@ export default class App extends React.Component {
       body: JSON.stringify(newTodo)
     })
       .then(res => res.json())
-      .then(() => this.setState({ todos: cloneList }));
+      .then(data => {
+        cloneList.push(data);
+        this.setState({ todos: cloneList });
+      }
+      );
   }
 
   toggleCompleted(todoId) {
-    const newTodos = this.state.todos;
+    const newTodos = [...this.state.todos];
     newTodos[todoId - 1].isCompleted = !newTodos[todoId - 1].isCompleted;
 
     fetch(`/api/todos/${todoId}`, {
