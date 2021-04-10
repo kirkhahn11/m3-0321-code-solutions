@@ -36,7 +36,7 @@ app.post('/api/auth/sign-up', (req, res, next) => {
 
       db.query(sql, params)
         .then(result => {
-          const newRow = result.rows;
+          const [newRow] = result.rows;
           res.json(newRow);
         });
     })
