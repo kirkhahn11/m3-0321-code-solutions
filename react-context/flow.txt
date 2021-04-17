@@ -1,0 +1,15 @@
+sign up: The client clicks 'register'. The const action's value changes to 'sign-up'
+The client creates a username and password which is sent to the server
+The server checks for errors and, if none, the password is hashed and the new data is added to the sql db
+
+sign in: the const action's value is set to 'sign-in'
+The client fills out username and password and submits the form
+the data is sent as a post request to the server. the server checks if the hashedpassword and username provided are in the database
+if the password and username are correct the result is given a token
+the client does a fetch request for the token and payload and the results are passed as an argument handleSignIn method of the App component through the onSignIn method of the AuthForm component
+The state.user is set to the new payload and the token is saved to the local storage
+The state change will cause a rerender and the user, route, handleSignIn and handleSignOut are saved as the contextValue and passed as a Provider
+the rerenderPage() method will be called and, since there is a user property now in context, the authPage comp will call the redirect comp and change the hash to ''
+since the token has been saved in a local storage the user will remain logged in until it is removed.
+
+sign out: When the user clicks the sign out button. this.state.user is set to null. the page rerenders removing the previous user and route from contextValue and the page is taken back to the sign-in/sign-up screen.
